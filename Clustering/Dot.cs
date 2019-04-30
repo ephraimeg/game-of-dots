@@ -8,21 +8,23 @@ namespace Clustering
 {
     public class Dot
     {
-        static int count = 1;
+        static int _dotId = 1;
         public int id { get; }
-        public int x { get; set; }
-        public int y { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
+        public int radius { get; set; }
 
         public Dot(int x, int y)
         {
-            this.id = count++;
-            this.x = x;
-            this.y = y;
+            this.id = _dotId++;
+            this.X = x;
+            this.Y = y;
+            this.radius = 5;
         }
 
         public override string ToString()
         {
-            return ($"P({this.x}, {this.y})");
+            return ($"P({this.X}, {this.Y})");
         }
     }
 }
