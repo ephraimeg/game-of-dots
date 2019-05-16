@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,13 @@ namespace Clustering
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+
+            ClusteringView view = new ClusteringView();
+            IList dots = new ArrayList();
+            ClusteringController controller = new ClusteringController(view, dots);
+            
+            Application.Run(view);
         }
     }
 }

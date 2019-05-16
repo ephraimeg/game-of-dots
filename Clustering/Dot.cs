@@ -19,7 +19,7 @@ namespace Clustering
             this.id = _dotId++;
             this.X = x;
             this.Y = y;
-            this.radius = 5;
+            this.radius = 20;
         }
 
         public override string ToString()
